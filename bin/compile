@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-indent() {
-  sed -u 's/^/       /'
-}
-
 echo "-----> Found a hello.txt"
+
+cd $3
 
 DOWNLOADS="/assets/downloads/"
 FONTS="/assets/fonts/"
@@ -12,15 +10,15 @@ GENERICONS="/assets/genericons/"
 IMAGES="/assets/images/"
 VIDEOS="/assets/videos/"
 
-AZURE_DOWNLOADS=$(cat Downloads)
-AZURE_FONTS=$(cat Fonts)
-AZURE_GENERICONS=$(cat Genericons)
-AZURE_IMAGES=$(cat Images)
-AZURE_VIDEOS=$(cat Videos)
+REMOTE_DOWNLOADS=$(cat Downloads)
+REMOTE_FONTS=$(cat Fonts)
+REMOTE_GENERICONS=$(cat Genericons)
+REMOTE_IMAGES=$(cat Images)
+REMOTE_VIDEOS=$(cat Videos)
 
 # replace hello with goodbye in a new file
 # find . -type f -exec sed -i 's+/assets\///+g' {} +
 
-echo $AZURE_FONTS
+echo $REMOTE_FONTS
 
 exit 0
