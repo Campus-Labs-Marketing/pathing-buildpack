@@ -1,4 +1,8 @@
-# Null Buildpack
+# Pathing Buildpack
+
+Forked buildpack to rewrite specific paths when the app is deployed.
+
+## Repository Origins
 
 This buildpack was originally designed to run Go programs on Heroku. The idea
 is that you cross-compile your Go program for Linux and then push you binary
