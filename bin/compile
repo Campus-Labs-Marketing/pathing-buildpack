@@ -6,15 +6,21 @@ indent() {
 
 echo "-----> Found a hello.txt"
 
-# if hello.txt is empty, abort the build
-if [ ! -s $1/hello.txt ]; then
-  echo "hello.txt was empty" | indent
-  exit 1
-fi
+DOWNLOADS="/assets/downloads/"
+FONTS="/assets/fonts/"
+GENERICONS="/assets/genericons/"
+IMAGES="/assets/images/"
+VIDEOS="/assets/videos/"
+
+AZURE_DOWNLOADS=$(cat Downloads)
+AZURE_FONTS=$(cat Fonts)
+AZURE_GENERICONS=$(cat Genericons)
+AZURE_IMAGES=$(cat Images)
+AZURE_VIDEOS=$(cat Videos)
 
 # replace hello with goodbye in a new file
 # find . -type f -exec sed -i 's+/assets\///+g' {} +
 
-cat Images
+echo $AZURE_FONTS
 
 exit 0
