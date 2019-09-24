@@ -5,7 +5,7 @@ echo "-----> Found a hello.txt"
 cd $3
 
 DOWNLOADS="/assets/downloads/"
-FONTS="/assets/fonts/"
+FONTS="../fonts/"
 GENERICONS="/assets/genericons/"
 IMAGES="/assets/images/"
 VIDEOS="/assets/videos/"
