@@ -8,6 +8,7 @@ DOWNLOADS="/assets/downloads/"
 FONTS="../fonts/"
 GENERICONS="/assets/genericons/"
 IMAGES="/assets/images/"
+IMAGES_RELATIVE="../images/"
 VIDEOS="/assets/videos/"
 
 REMOTE_DOWNLOADS=$(cat Downloads)
@@ -19,7 +20,7 @@ REMOTE_VIDEOS=$(cat Videos)
 find $1 -type f -exec sed -i "s|$DOWNLOADS|$REMOTE_DOWNLOADS|g" {} +
 find $1 -type f -exec sed -i "s|$FONTS|$REMOTE_FONTS|g" {} +
 find $1 -type f -exec sed -i "s|$GENERICONS|$REMOTE_GENERICONS|g" {} +
-find $1 -type f -exec sed -i "s|$IMAGES|$REMOTE_IMAGES|g" {} +
+find $1 -type f -exec sed -i "s|$IMAGES+$IMAGES_RELATIVE|$REMOTE_IMAGES|g" {} +
 find $1 -type f -exec sed -i "s|$VIDEOS|$REMOTE_VIDEOS|g" {} +
 
 # exit 0
