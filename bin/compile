@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "-----> Found a hello.txt"
+echo "-----> Found a pathupdates.txt"
 
 cd $3
 

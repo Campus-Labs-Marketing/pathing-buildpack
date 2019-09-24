@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # this pack is valid for apps with a hello.txt in the root
-if [ -f $1/hello.txt ]; then
-  echo "HelloFramework"
+if [ -f $1/pathupdates.txt ]; then
+  echo "PathUpdates"
   exit 0
 else
   exit 1
