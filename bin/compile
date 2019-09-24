@@ -22,4 +22,4 @@ find . -type f -exec sed -i "s|$GENERICONS|$REMOTE_GENERICONS|g" {} +
 find . -type f -exec sed -i "s|$IMAGES|$REMOTE_IMAGES|g" {} +
 find . -type f -exec sed -i "s|$VIDEOS|$REMOTE_VIDEOS|g" {} +
 
-exit 0
+# exit 0
