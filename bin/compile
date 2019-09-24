@@ -16,10 +16,10 @@ REMOTE_GENERICONS=$(cat Genericons)
 REMOTE_IMAGES=$(cat Images)
 REMOTE_VIDEOS=$(cat Videos)
 
-find . -type f -exec sed -i "s/$DOWNLOADS/$REMOTE_DOWNLOADS/g" {} +
-find . -type f -exec sed -i "s/$FONTS/$REMOTE_FONTS/g" {} +
-find . -type f -exec sed -i "s/$GENERICONS/$REMOTE_GENERICONS/g" {} +
-find . -type f -exec sed -i "s/$IMAGES/$REMOTE_IMAGES/g" {} +
-find . -type f -exec sed -i "s/$VIDEOS/$REMOTE_VIDEOS/g" {} +
+find . -type f -exec sed -i "s|$DOWNLOADS|$REMOTE_DOWNLOADS|g" {} +
+find . -type f -exec sed -i "s|$FONTS|$REMOTE_FONTS|g" {} +
+find . -type f -exec sed -i "s|$GENERICONS|$REMOTE_GENERICONS|g" {} +
+find . -type f -exec sed -i "s|$IMAGES|$REMOTE_IMAGES|g" {} +
+find . -type f -exec sed -i "s|$VIDEOS|$REMOTE_VIDEOS|g" {} +
 
 exit 0
