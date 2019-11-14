@@ -4,7 +4,7 @@ echo "-----> Found a pathupdates.txt"
 
 cd $3
 
-DOWNLOADS="/assets/downloads/"
+DOWNLOADS="\"/assets/downloads/"
 IMAGES="/assets/images/"
 IMAGES_RELATIVE="\.\./images/"
 VIDEOS="/assets/videos/"
@@ -13,7 +13,7 @@ REMOTE_DOWNLOADS=$(cat Downloads)
 REMOTE_IMAGES=$(cat Images)
 REMOTE_VIDEOS=$(cat Videos)
 
-find $1 -type f -exec sed -i "s|$DOWNLOADS|$REMOTE_DOWNLOADS|g" {} +
+find $1 -type f -exec sed -i "s|$DOWNLOADS|\"$REMOTE_DOWNLOADS|g" {} +
 find $1 -type f -exec sed -i "s|$IMAGES|$REMOTE_IMAGES|g" {} +
 find $1 -type f -exec sed -i "s|$IMAGES_RELATIVE|$REMOTE_IMAGES|g" {} +
 find $1 -type f -exec sed -i "s|$VIDEOS|$REMOTE_VIDEOS|g" {} +
